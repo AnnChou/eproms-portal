@@ -59,10 +59,12 @@ These coded values were implemented in both the FHIR Questionnaire and the LHC-F
 Together, these files demonstrate a modular approach to digitizing PROMs using HL7 FHIR, SNOMED CT, and LOINC standards
 
 ---
-## 📎 Full Report
+📘 Original Academic Report (Available by Request)
+This ePROMS Portal was first developed for a graduate-level health informatics course during a period of personal illness and time constraints. While the original technical report includes valuable mapping work and feedback, it remains an unedited academic artifact.
 
-Download the full final report from the `rss` folder:  
-📄 `ePROMS-FinalReport.pdf`
+To preserve the integrity of the documentation while recognizing its roughness, the full report is not publicly published here.
+
+📨 If you're interested in viewing the original write-up for teaching, design research, or health prototyping, feel free to reach out via annchou.github.io or @annreflection.
 ---
 ## 🧩 Standards & Tools Used
 

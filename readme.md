@@ -63,7 +63,14 @@ These responses were structured for use with both FHIR Questionnaire and LHC-For
 - `phq9-snomed-mapping.json` – SNOMED CT concept overlays  
 - `sample-sample.json` – Custom LHC-Forms question section  
 - All files follow HL7 FHIR and clinical terminology standards  
+---
+### 🛠️ Implementation Status
+The ePROMS Portal is a partially implemented prototype using the HL7-compliant LHC-Forms toolkit. It showcases:
+- Patient symptom entry using structured JSON questionnaires
+- Standards mapping via FHIR, SNOMED CT, and LOINC
+- Interface walkthroughs and usability exploration
 
+🔧 While not a fully deployable system, the project demonstrates how Patient Health Record (PHR) systems can incorporate PROMs with minimal integration—provided they adopt JSON-formatted resources based on these standards.
 ---
 ## 📝 Simplified Online Report
 

@@ -1,4 +1,4 @@
-<html lang="en">
+  <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,7 +28,17 @@
 </head>
 
 <body>
-  <main class="content">
+  <!-- 🔗 Accessibility: Skip Link for Keyboard Navigation -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Optional: Site Header or Nav -->
+    <!-- 🌟 Site Header with ARIA Role -->
+    <header role="banner" class="site-header">
+      <img src="rss/ePROMS_title.png" alt="ePROMS Portal Title Banner" />
+    
+        <!-- Nav, logo, etc. -->
+    </header>
+   <!-- 🌿 Main Content -->
+  <main id="main-content" role="main">
     <article>
       <header>
         <h1>ePROMS Portal – a digital health technical implementation and Case Study</h1>
@@ -246,7 +256,7 @@
       </section>
 
       <section>
-        <h2>Reflections & Next Steps</h2>
+        <h2> Next Steps</h2>
         <ul>
           <li>Refine PROMs for brevity and accessibility</li>
           <li>Incorporate visual symptom capture (e.g., drawing interface)</li>

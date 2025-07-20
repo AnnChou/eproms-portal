@@ -99,7 +99,7 @@ To preserve its context but honor its roughness, the report isn’t publicly hos
 - [LOINC](https://loinc.org/)  
 - [SNOMED CT](https://www.snomed.org/)  
 - SMART on FHIR API  
-- [LHC-Forms Toolkit] (https://lhncbc.github.io/lforms/)
+- [LHC-Forms Toolkit](https://lhncbc.github.io/lforms/)
 
 ---
 
@@ -131,7 +131,7 @@ How it’s used:
 The web portal loads this JSON file and renders it as an interactive form for patients. After the patient fills it out, their responses are structured as a FHIR QuestionnaireResponse for downstream processing, storage, or integration with other healthcare systems.
 
 🌐 Live Preview
-Want to see it in action? Visit [miniportal.html] (miniportal.html), which dynamically loads and renders 9-sections.lforms.json inside the page.
+Want to see it in action? Visit [miniportal.html](miniportal.html), which dynamically loads and renders 9-sections.lforms.json inside the page.
 
 ### 📄 PHQ-9 Questionnaire
 

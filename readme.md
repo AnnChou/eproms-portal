@@ -3,7 +3,7 @@
 *Field Project: HINF 597 – Health Terminology Standards*  
 University of Victoria (2020) · _Ann K. Chou_
 
-This prototype explores how patient-reported outcomes (PROMs) can be semantically integrated into electronic health records using standards-based tools.
+This technical implementation and case study explores how patient-reported outcomes (PROMs) can be semantically integrated into electronic health records using standards-based tools.
 
 ---
 
@@ -65,6 +65,12 @@ These responses were structured for use with both FHIR Questionnaire and LHC-For
 - All files follow HL7 FHIR and clinical terminology standards  
 
 ---
+## 📝 Simplified Online Report
+
+The ePROMS Portal case study is available as a web-accessible version featuring interface walkthroughs, technical context, and visual design notes.
+
+🌐 [Visit the Simplified Report](https://annchou.github.io/eproms-portal/)
+
 
 ## 📘 Academic Report (Available by Request)
 

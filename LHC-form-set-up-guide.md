@@ -5,38 +5,48 @@ This guide outlines how to set up the LHC-Forms toolkit in a standards-based pro
 Include the LForms JS and CSS in your HTML.
 You can use CDN links for demo/prototype purposes.
 
-HTML
+```html
 <!-- In your main HTML file -->
 <head>
-  <link rel="stylesheet" href="https://lhncbc.github.io/lforms/releases/30.0.0/webcomponent/styles.css">
 </head>
 <body>
   <!-- The container for your form -->
   <div id="lforms-container"></div>
-  
-  <script src="https://lhncbc.github.io/lforms/releases/30.0.0/webcomponent/lforms.min.js"></script>
-  <script src="https://lhncbc.github.io/lforms/releases/30.0.0/webcomponent/lforms-webcomponent.min.js"></script>
+
+  <link
+    href="https://clinicaltables.nlm.nih.gov/lforms-versions/17.0.0/styles/lforms.min.css"
+    media="screen" rel="stylesheet" />
+  <script
+    src="https://clinicaltables.nlm.nih.gov/lforms-versions/17.0.0/lforms.min.js">
+  </script>
+  <script src="scripts/miniportal.js"></script>
   <script src="portal.js"></script> <!-- Create this file for your logic -->
 </body>
+```
+
 ---
 2. Place Your 9-sections.lforms.json in the Project
-Save your JSON (the LForms Questionnaire) as 9-sections.lforms.json in your project root or a data/ directory.
+Save your JSON (the LForms Questionnaire) as `yourfile.lforms.json` in your project root or a data/ directory.
 ---
 3. Load and Render the Form
 Create a portal.js file to dynamically load the JSON and render it with LForms.
 
-
-portal.js
+```js
+// portal.js
 // Load the LForms Questionnaire and render it
 fetch('9-sections.lforms.json')
   .then(response => response.json())
   .then(formData => {
     // Render the form inside the container
     LForms.Util.addFormToPage(formData, 'lforms-container');
-Add a button in your HTML for patients to save/submit their data:
+  });
+```
 
-HTML
+```html
+<!-- Submit button in your HTML file -->
 <button onclick="getPatientResponse()">Submit</button>
+```
+
 ---
 4. Result
 When a patient visits the page, the form described by 9-sections.lforms.json will be rendered.
@@ -47,7 +57,7 @@ Code
 /
 ├── index.html
 ├── portal.js
-└── 9-sections.lforms.json
+└── yourfile.lforms.json
 ---
 7. Optional: Styling & Enhancements
 You can adjust the look by overriding the included CSS.

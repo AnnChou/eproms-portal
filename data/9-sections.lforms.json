@@ -1,0 +1,5006 @@
+{
+  "name": "ePROMS Portal",
+  "status": "draft",
+  "codeList": [
+    {
+      "code": "ePROMS",
+      "display": "ePROMS Portal"
+    }
+  ],
+  "items": [
+    {
+      "header": false,
+      "dataType": "REAL",
+      "question": "Date form completed",
+      "linkId": "/30947-6",
+      "questionCodeSystem": "http://loinc.org",
+      "questionCode": "30947-6",
+      "questionCardinality": {
+        "min": "1",
+        "max": "1"
+      },
+      "answerCardinality": {
+        "min": "0",
+        "max": "1"
+      },
+      "editable": "1",
+      "units": [
+        {
+          "name": "{mm/dd/yyyy}"
+        }
+      ]
+    },
+    {
+      "header": true,
+      "question": "Medical Conditions",
+      "linkId": "/conditions",
+      "questionCodeSystem": "Custom",
+      "questionCode": "conditions",
+      "questionCardinality": {
+        "min": "1",
+        "max": "*"
+      },
+      "answerCardinality": {
+        "min": "0",
+        "max": "1"
+      },
+      "editable": "1",
+      "displayControl": {
+        "questionLayout": "horizontal"
+      },
+      "codeList": [
+        {
+          "code": "conditions",
+          "display": "Medical Conditions",
+          "system": "Custom"
+        }
+      ],
+      "items": [
+        {
+          "header": false,
+          "dataType": "CWE",
+          "question": "Medical condition",
+          "linkId": "/conditions/condition",
+          "questionCodeSystem": "Custom",
+          "questionCode": "condition",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "answers": null,
+          "externallyDefined": "https://clinicaltables.nlm.nih.gov/api/conditions/v3/search",
+          "codeList": [
+            {
+              "code": "condition",
+              "display": "Medical condition",
+              "system": "Custom"
+            }
+          ]
+        },
+        {
+          "header": false,
+          "dataType": "CNE",
+          "question": "Status",
+          "linkId": "/conditions/cond_status",
+          "questionCodeSystem": "Custom",
+          "questionCode": "cond_status",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "answers": [
+            {
+              "text": "Active",
+              "code": "A",
+              "system": null,
+              "label": null,
+              "score": null
+            },
+            {
+              "text": "Inactive",
+              "code": "I",
+              "system": null,
+              "label": null,
+              "score": null
+            }
+          ],
+          "displayControl": {
+            "answerLayout": {
+              "type": "COMBO_BOX"
+            }
+          },
+          "codeList": [
+            {
+              "code": "cond_status",
+              "display": "Status",
+              "system": "Custom"
+            }
+          ]
+        },
+        {
+          "header": false,
+          "dataType": "DT",
+          "question": "Started",
+          "linkId": "/conditions/cond_started",
+          "questionCodeSystem": "Custom",
+          "questionCode": "cond_started",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "codeList": [
+            {
+              "code": "cond_started",
+              "display": "Started",
+              "system": "Custom"
+            }
+          ]
+        },
+        {
+          "header": false,
+          "dataType": "DT",
+          "question": "Stopped",
+          "linkId": "/conditions/cond_stopped",
+          "questionCodeSystem": "Custom",
+          "questionCode": "cond_stopped",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "codeList": [
+            {
+              "code": "cond_stopped",
+              "display": "Stopped",
+              "system": "Custom"
+            }
+          ]
+        },
+        {
+          "header": false,
+          "dataType": "TX",
+          "question": "Description/Comment",
+          "linkId": "/conditions/cond_comment",
+          "questionCodeSystem": "Custom",
+          "questionCode": "cond_comment",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "codeList": [
+            {
+              "code": "cond_comment",
+              "display": "Description/Comment",
+              "system": "Custom"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "header": true,
+      "question": "Questions to Ask Your Doctor",
+      "linkId": "/questions",
+      "questionCode": "questions",
+      "questionCardinality": {
+        "min": "1",
+        "max": "*"
+      },
+      "answerCardinality": {
+        "min": "0",
+        "max": "1"
+      },
+      "editable": "1",
+      "displayControl": {
+        "questionLayout": "horizontal"
+      },
+      "codeList": [
+        {
+          "code": "questions",
+          "display": "Questions to Ask Your Doctor"
+        }
+      ],
+      "items": [
+        {
+          "header": false,
+          "dataType": "DT",
+          "question": "Date entered",
+          "linkId": "/questions/question_date",
+          "questionCodeSystem": "Custom",
+          "questionCode": "question_date",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "codeList": [
+            {
+              "code": "question_date",
+              "display": "Date entered",
+              "system": "Custom"
+            }
+          ]
+        },
+        {
+          "header": false,
+          "dataType": "CWE",
+          "question": "Category",
+          "linkId": "/questions/question_category",
+          "questionCodeSystem": "Custom",
+          "questionCode": "question_category",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "answers": [
+            {
+              "text": "Allergies",
+              "code": "QUE-13",
+              "system": null,
+              "label": null,
+              "score": null
+            },
+            {
+              "text": "Disease risk based on family history",
+              "code": "QUE-21",
+              "system": null,
+              "label": null,
+              "score": null
+            },
+            {
+              "text": "Exercise",
+              "code": "QUE-7",
+              "system": null,
+              "label": null,
+              "score": null
+            },
+            {
+              "text": "General symptoms",
+              "code": "QUE-0",
+              "system": null,
+              "label": null,
+              "score": null
+            },
+            {
+              "text": "Genetic testing",
+              "code": "QUE-20",
+              "system": null,
+              "label": null,
+              "score": null
+            },
+            {
+              "text": "Herbal or alternative remedies",
+              "code": "QUE-8",
+              "system": null,
+              "label": null,
+              "score": null
+            },
+            {
+              "text": "Infant or child development",
+              "code": "QUE-16",
+              "system": null,
+              "label": null,
+              "score": null
+            },
+            {
+              "text": "Insurance",
+              "code": "QUE-15",
+              "system": null,
+              "label": null,
+              "score": null
+            },
+            {
+              "text": "Lab tests and/or results",
+              "code": "QUE-11",
+              "system": null,
+              "label": null,
+              "score": null
+            },
+            {
+              "text": "Medical conditions",
+              "code": "QUE-5",
+              "system": null,
+              "label": null,
+              "score": null
+            },
+            {
+              "text": "Medical equipment and/or supplies",
+              "code": "QUE-4",
+              "system": null,
+              "label": null,
+              "score": null
+            },
+            {
+              "text": "Medications",
+              "code": "QUE-3",
+              "system": null,
+              "label": null,
+              "score": null
+            },
+            {
+              "text": "Nutrition",
+              "code": "QUE-6",
+              "system": null,
+              "label": null,
+              "score": null
+            },
+            {
+              "text": "Preventive/screening tests",
+              "code": "QUE-12",
+              "system": null,
+              "label": null,
+              "score": null
+            },
+            {
+              "text": "Referrals",
+              "code": "QUE-14",
+              "system": null,
+              "label": null,
+              "score": null
+            },
+            {
+              "text": "School or learning issues",
+              "code": "QUE-17",
+              "system": null,
+              "label": null,
+              "score": null
+            },
+            {
+              "text": "Sports injuries",
+              "code": "QUE-18",
+              "system": null,
+              "label": null,
+              "score": null
+            },
+            {
+              "text": "Surgeries",
+              "code": "QUE-2",
+              "system": null,
+              "label": null,
+              "score": null
+            },
+            {
+              "text": "Travel advice",
+              "code": "QUE-9",
+              "system": null,
+              "label": null,
+              "score": null
+            },
+            {
+              "text": "Vaccines",
+              "code": "QUE-10",
+              "system": null,
+              "label": null,
+              "score": null
+            },
+            {
+              "text": "X-ray or other radiology tests and/or results",
+              "code": "QUE-19",
+              "system": null,
+              "label": null,
+              "score": null
+            }
+          ],
+          "displayControl": {
+            "answerLayout": {
+              "type": "COMBO_BOX"
+            }
+          },
+          "codeList": [
+            {
+              "code": "question_category",
+              "display": "Category",
+              "system": "Custom"
+            }
+          ]
+        },
+        {
+          "header": false,
+          "dataType": "CNE",
+          "question": "Status",
+          "linkId": "/questions/question_status",
+          "questionCodeSystem": "Custom",
+          "questionCode": "question_status",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "answers": [
+            {
+              "text": "Asked",
+              "code": "asked",
+              "system": null,
+              "label": null,
+              "score": null
+            },
+            {
+              "text": "Not Asked",
+              "code": "not_asked",
+              "system": null,
+              "label": null,
+              "score": null
+            }
+          ],
+          "displayControl": {
+            "answerLayout": {
+              "type": "COMBO_BOX"
+            }
+          },
+          "codeList": [
+            {
+              "code": "question_status",
+              "display": "Status",
+              "system": "Custom"
+            }
+          ]
+        },
+        {
+          "header": false,
+          "dataType": "TX",
+          "question": "Question",
+          "linkId": "/questions/question_text",
+          "questionCodeSystem": "Custom",
+          "questionCode": "question_text",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "codeList": [
+            {
+              "code": "question_text",
+              "display": "Question",
+              "system": "Custom"
+            }
+          ]
+        },
+        {
+          "header": false,
+          "dataType": "TX",
+          "question": "Answer",
+          "linkId": "/questions/question_answer",
+          "questionCodeSystem": "Custom",
+          "questionCode": "question_answer",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "codeList": [
+            {
+              "code": "question_answer",
+              "display": "Answer",
+              "system": "Custom"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "header": true,
+      "question": "Notes",
+      "linkId": "/notes",
+      "questionCode": "notes",
+      "questionCardinality": {
+        "min": "1",
+        "max": "*"
+      },
+      "answerCardinality": {
+        "min": "0",
+        "max": "1"
+      },
+      "editable": "1",
+      "displayControl": {
+        "questionLayout": "horizontal"
+      },
+      "codeList": [
+        {
+          "code": "notes",
+          "display": "Notes"
+        }
+      ],
+      "items": [
+        {
+          "header": false,
+          "dataType": "DT",
+          "question": "Date",
+          "linkId": "/notes/note_date",
+          "questionCodeSystem": "Custom",
+          "questionCode": "note_date",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "codeList": [
+            {
+              "code": "note_date",
+              "display": "Date",
+              "system": "Custom"
+            }
+          ]
+        },
+        {
+          "header": false,
+          "dataType": "TX",
+          "question": "Note",
+          "linkId": "/notes/note_text",
+          "questionCodeSystem": "Custom",
+          "questionCode": "note_text",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "codeList": [
+            {
+              "code": "note_text",
+              "display": "Note",
+              "system": "Custom"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "header": true,
+      "question": "Test Results & Trackers",
+      "linkId": "/note_text",
+      "questionCodeSystem": "Custom",
+      "questionCode": "note_text",
+      "codingInstructions": "To add add tests results and trackers, open <a href='/' target=_blank>a new window</a> and then use the \"Search LOINC Panels\" tab on the left to select a new form.  Each form will be saved in its own file.",
+      "questionCardinality": {
+        "min": "1",
+        "max": "1"
+      },
+      "answerCardinality": {
+        "min": "0",
+        "max": "1"
+      },
+      "editable": "0",
+      "codingInstructionsFormat": "html",
+      "codeList": [
+        {
+          "code": "note_text",
+          "display": "Test Results & Trackers",
+          "system": "Custom"
+        }
+      ]
+    },
+    {
+      "header": true,
+      "question": "PHQ-9 quick depression assessment panel [Reported.PHQ]",
+      "linkId": "/44249-1",
+      "questionCodeSystem": "http://loinc.org",
+      "questionCode": "44249-1",
+      "codingInstructions": "The Patient Health Questionnaire is a self-administered version of the PRIME-MD diagnostic instrument for common mental disorders. The PHQ-9 is the depression module, which scores each of the 9 DSM-IV criteria as \"0\" (not at all) to \"3\" (nearly every day).\r\nFor initial diagnosis:\r\n1. Patient completes PHQ-9 Quick Depression Assessment on accompanying tear-off pad.\r\n2. If there are at least 4 checks in the blue highlighted section (including Questions #1 and #2), consider a depressive disorder. Add score to determine severity.\r\n3a. Consider Major Depressive Disorder: if there are at least 5 checks in the blue highlighted section (one of which corresponds to Question #1 or #2).\r\n3b. Consider Other Depressive Disorder: if there are 2 to 4 checks in the blue highlighted section (one of which corresponds to Question #1 or #2)\r\n\r\nNote: Since the questionnaire relies on patient self-report, all responses should be verified by the clinician and a definitive diagnosis made on clinical grounds, taking into account how well the patient understood the questionnaire, as well as other relevant information from the patient. Diagnoses of Major Depressive Disorder or Other Depressive Disorder also require impairment of social, occupational, or other important areas of functioning (Question #10) and ruling out normal bereavement, a history of a Manic Episode (Bipolar Disorder), and a physical disorder, medication, or other drug as the biological cause of the depressive symptoms.\r\n\r\nTo monitor severity over time for newly diagnosed patients or patients in current treatment for depression:\r\n\r\n1. Patients may complete questionnaires at baseline and at regular intervals (eg, every 2 weeks) at home and bring them in at their next appointment for scoring or they may complete the questionnaire during each scheduled appointment.\r\n2. Add up the checks by column. For every check: Several days = 1 More than half the days = 2 Nearly every day = 3\r\n3. Add together column scores to get a TOTAL score.\r\n4. Refer to the accompanying PHQ-9 Scoring Card to interpret the TOTAL score.\r\n5. Results may be included in patients' files to assist you in setting up a treatment goal, determining degree of response, as well as guiding treatment intervention.\r\n\r\nPHQ-9 is adapted from PRIME MD TODAY, developed by Drs Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke, and colleagues, with an educational grant from Pfizer Inc. For research information, contact Dr Spitzer at rls8@columbia.edu.",
+      "questionCardinality": {
+        "min": "1",
+        "max": "1"
+      },
+      "answerCardinality": {
+        "min": "0",
+        "max": "1"
+      },
+      "editable": "1",
+      "copyrightNotice": "Copyright © Pfizer Inc. All rights reserved. Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from Pfizer Inc. No permission required to reproduce, translate, display or distribute.",
+      "lformsVersion": "25.0.0",
+      "items": [
+        {
+          "header": false,
+          "dataType": "CNE",
+          "question": "Little interest or pleasure in doing things",
+          "linkId": "/44250-9",
+          "questionCodeSystem": "http://loinc.org",
+          "questionCode": "44250-9",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "answers": [
+            {
+              "text": "Not at all",
+              "code": "LA6568-5",
+              "system": null,
+              "label": "0",
+              "score": 0
+            },
+            {
+              "text": "Several days",
+              "code": "LA6569-3",
+              "system": null,
+              "label": "1",
+              "score": 1
+            },
+            {
+              "text": "More than half the days",
+              "code": "LA6570-1",
+              "system": null,
+              "label": "2",
+              "score": 2
+            },
+            {
+              "text": "Nearly every day",
+              "code": "LA6571-9",
+              "system": null,
+              "label": "3",
+              "score": 3
+            }
+          ],
+          "copyrightNotice": "Copyright © Pfizer Inc. All rights reserved. Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from Pfizer Inc. No permission required to reproduce, translate, display or distribute."
+        },
+        {
+          "header": false,
+          "dataType": "CNE",
+          "question": "Feeling down, depressed, or hopeless",
+          "linkId": "/44255-8",
+          "questionCodeSystem": "http://loinc.org",
+          "questionCode": "44255-8",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "answers": [
+            {
+              "text": "Not at all",
+              "code": "LA6568-5",
+              "system": null,
+              "label": "0",
+              "score": 0
+            },
+            {
+              "text": "Several days",
+              "code": "LA6569-3",
+              "system": null,
+              "label": "1",
+              "score": 1
+            },
+            {
+              "text": "More than half the days",
+              "code": "LA6570-1",
+              "system": null,
+              "label": "2",
+              "score": 2
+            },
+            {
+              "text": "Nearly every day",
+              "code": "LA6571-9",
+              "system": null,
+              "label": "3",
+              "score": 3
+            }
+          ],
+          "copyrightNotice": "Copyright © Pfizer Inc. All rights reserved. Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from Pfizer Inc. No permission required to reproduce, translate, display or distribute."
+        },
+        {
+          "header": false,
+          "dataType": "CNE",
+          "question": "Trouble falling or staying asleep, or sleeping too much",
+          "linkId": "/44259-0",
+          "questionCodeSystem": "http://loinc.org",
+          "questionCode": "44259-0",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "answers": [
+            {
+              "text": "Not at all",
+              "code": "LA6568-5",
+              "system": null,
+              "label": "0",
+              "score": 0
+            },
+            {
+              "text": "Several days",
+              "code": "LA6569-3",
+              "system": null,
+              "label": "1",
+              "score": 1
+            },
+            {
+              "text": "More than half the days",
+              "code": "LA6570-1",
+              "system": null,
+              "label": "2",
+              "score": 2
+            },
+            {
+              "text": "Nearly every day",
+              "code": "LA6571-9",
+              "system": null,
+              "label": "3",
+              "score": 3
+            }
+          ],
+          "copyrightNotice": "Copyright © Pfizer Inc. All rights reserved. Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from Pfizer Inc. No permission required to reproduce, translate, display or distribute."
+        },
+        {
+          "header": false,
+          "dataType": "CNE",
+          "question": "Feeling tired or having little energy",
+          "linkId": "/44254-1",
+          "questionCodeSystem": "http://loinc.org",
+          "questionCode": "44254-1",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "answers": [
+            {
+              "text": "Not at all",
+              "code": "LA6568-5",
+              "system": null,
+              "label": "0",
+              "score": 0
+            },
+            {
+              "text": "Several days",
+              "code": "LA6569-3",
+              "system": null,
+              "label": "1",
+              "score": 1
+            },
+            {
+              "text": "More than half the days",
+              "code": "LA6570-1",
+              "system": null,
+              "label": "2",
+              "score": 2
+            },
+            {
+              "text": "Nearly every day",
+              "code": "LA6571-9",
+              "system": null,
+              "label": "3",
+              "score": 3
+            }
+          ],
+          "copyrightNotice": "Copyright © Pfizer Inc. All rights reserved. Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from Pfizer Inc. No permission required to reproduce, translate, display or distribute."
+        },
+        {
+          "header": false,
+          "dataType": "CNE",
+          "question": "Poor appetite or overeating",
+          "linkId": "/44251-7",
+          "questionCodeSystem": "http://loinc.org",
+          "questionCode": "44251-7",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "answers": [
+            {
+              "text": "Not at all",
+              "code": "LA6568-5",
+              "system": null,
+              "label": "0",
+              "score": 0
+            },
+            {
+              "text": "Several days",
+              "code": "LA6569-3",
+              "system": null,
+              "label": "1",
+              "score": 1
+            },
+            {
+              "text": "More than half the days",
+              "code": "LA6570-1",
+              "system": null,
+              "label": "2",
+              "score": 2
+            },
+            {
+              "text": "Nearly every day",
+              "code": "LA6571-9",
+              "system": null,
+              "label": "3",
+              "score": 3
+            }
+          ],
+          "copyrightNotice": "Copyright © Pfizer Inc. All rights reserved. Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from Pfizer Inc. No permission required to reproduce, translate, display or distribute."
+        },
+        {
+          "header": false,
+          "dataType": "CNE",
+          "question": "Feeling bad about yourself-or that you are a failure or have let yourself or your family down",
+          "linkId": "/44258-2",
+          "questionCodeSystem": "http://loinc.org",
+          "questionCode": "44258-2",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "answers": [
+            {
+              "text": "Not at all",
+              "code": "LA6568-5",
+              "system": null,
+              "label": "0",
+              "score": 0
+            },
+            {
+              "text": "Several days",
+              "code": "LA6569-3",
+              "system": null,
+              "label": "1",
+              "score": 1
+            },
+            {
+              "text": "More than half the days",
+              "code": "LA6570-1",
+              "system": null,
+              "label": "2",
+              "score": 2
+            },
+            {
+              "text": "Nearly every day",
+              "code": "LA6571-9",
+              "system": null,
+              "label": "3",
+              "score": 3
+            }
+          ],
+          "copyrightNotice": "Copyright © Pfizer Inc. All rights reserved. Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from Pfizer Inc. No permission required to reproduce, translate, display or distribute."
+        },
+        {
+          "header": false,
+          "dataType": "CNE",
+          "question": "Trouble concentrating on things, such as reading the newspaper or watching television",
+          "linkId": "/44252-5",
+          "questionCodeSystem": "http://loinc.org",
+          "questionCode": "44252-5",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "answers": [
+            {
+              "text": "Not at all",
+              "code": "LA6568-5",
+              "system": null,
+              "label": "0",
+              "score": 0
+            },
+            {
+              "text": "Several days",
+              "code": "LA6569-3",
+              "system": null,
+              "label": "1",
+              "score": 1
+            },
+            {
+              "text": "More than half the days",
+              "code": "LA6570-1",
+              "system": null,
+              "label": "2",
+              "score": 2
+            },
+            {
+              "text": "Nearly every day",
+              "code": "LA6571-9",
+              "system": null,
+              "label": "3",
+              "score": 3
+            }
+          ],
+          "copyrightNotice": "Copyright © Pfizer Inc. All rights reserved. Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from Pfizer Inc. No permission required to reproduce, translate, display or distribute."
+        },
+        {
+          "header": false,
+          "dataType": "CNE",
+          "question": "Moving or speaking so slowly that other people could have noticed. Or the opposite-being so fidgety or restless that you have been moving around a lot more than usual",
+          "linkId": "/44253-3",
+          "questionCodeSystem": "http://loinc.org",
+          "questionCode": "44253-3",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "answers": [
+            {
+              "text": "Not at all",
+              "code": "LA6568-5",
+              "system": null,
+              "label": "0",
+              "score": 0
+            },
+            {
+              "text": "Several days",
+              "code": "LA6569-3",
+              "system": null,
+              "label": "1",
+              "score": 1
+            },
+            {
+              "text": "More than half the days",
+              "code": "LA6570-1",
+              "system": null,
+              "label": "2",
+              "score": 2
+            },
+            {
+              "text": "Nearly every day",
+              "code": "LA6571-9",
+              "system": null,
+              "label": "3",
+              "score": 3
+            }
+          ],
+          "copyrightNotice": "Copyright © Pfizer Inc. All rights reserved. Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from Pfizer Inc. No permission required to reproduce, translate, display or distribute."
+        },
+        {
+          "header": false,
+          "dataType": "CNE",
+          "question": "Thoughts that you would be better off dead, or of hurting yourself in some way",
+          "linkId": "/44260-8",
+          "questionCodeSystem": "http://loinc.org",
+          "questionCode": "44260-8",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "answers": [
+            {
+              "text": "Not at all",
+              "code": "LA6568-5",
+              "system": null,
+              "label": "0",
+              "score": 0
+            },
+            {
+              "text": "Several days",
+              "code": "LA6569-3",
+              "system": null,
+              "label": "1",
+              "score": 1
+            },
+            {
+              "text": "More than half the days",
+              "code": "LA6570-1",
+              "system": null,
+              "label": "2",
+              "score": 2
+            },
+            {
+              "text": "Nearly every day",
+              "code": "LA6571-9",
+              "system": null,
+              "label": "3",
+              "score": 3
+            }
+          ],
+          "copyrightNotice": "Copyright © Pfizer Inc. All rights reserved. Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from Pfizer Inc. No permission required to reproduce, translate, display or distribute."
+        },
+        {
+          "header": false,
+          "dataType": "CNE",
+          "question": "How difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?",
+          "linkId": "/69722-7",
+          "questionCodeSystem": "http://loinc.org",
+          "questionCode": "69722-7",
+          "codingInstructions": "If you checked off any problems on this questionnaire",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "answers": [
+            {
+              "text": "Not difficult at all",
+              "code": "LA6572-7",
+              "system": null,
+              "label": null,
+              "score": null
+            },
+            {
+              "text": "Somewhat difficult",
+              "code": "LA6573-5",
+              "system": null,
+              "label": null,
+              "score": null
+            },
+            {
+              "text": "Very difficult",
+              "code": "LA6575-0",
+              "system": null,
+              "label": null,
+              "score": null
+            },
+            {
+              "text": "Extremely difficult",
+              "code": "LA6574-3",
+              "system": null,
+              "label": null,
+              "score": null
+            }
+          ],
+          "copyrightNotice": "Copyright © Pfizer Inc. All rights reserved. Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from Pfizer Inc. No permission required to reproduce, translate, display or distribute."
+        },
+        {
+          "header": false,
+          "dataType": "REAL",
+          "question": "Patient health questionnaire 9 item total score",
+          "linkId": "/44261-6",
+          "questionCodeSystem": "http://loinc.org",
+          "questionCode": "44261-6",
+          "codingInstructions": "The PHQ-9 is the standard (and most commonly used) depression measure, and it ranges from 0-27 Scoring: Add up all checked boxes on PHQ-9. For every check: Not at all = 0; Several days = 1; More than half the days = 2; Nearly every day = 3 (the scores are the codes that appear in the answer list for each of the PHQ-9 problem panel terms). Interpretation: 1-4 = Minimal depression; 5-9 = Mild depression; 10-14 = Moderate depression; 15-19 = Moderately severe depression; 20-27 = Severed depression.",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "units": [
+            {
+              "name": "{score}"
+            }
+          ],
+          "calculationMethod": {
+            "name": "TOTALSCORE"
+          },
+          "copyrightNotice": "Copyright © Pfizer Inc. All rights reserved. Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from Pfizer Inc. No permission required to reproduce, translate, display or distribute."
+        }
+      ]
+    },
+    {
+      "header": true,
+      "question": "Mental residual functional capacity (RFC) assessment form",
+      "linkId": "/46611-0",
+      "questionCodeSystem": "http://loinc.org/modified",
+      "questionCode": "Modified_46611-0",
+      "questionCardinality": {
+        "min": "1",
+        "max": "1"
+      },
+      "answerCardinality": {
+        "min": "0",
+        "max": "1"
+      },
+      "editable": "1",
+      "lformsVersion": "25.0.0",
+      "items": [
+        {
+          "header": false,
+          "dataType": "ST",
+          "question": "Categories",
+          "linkId": "/46635-9",
+          "questionCodeSystem": "http://loinc.org",
+          "questionCode": "46635-9",
+          "codingInstructions": "From Section IB (medical dispositions) of the Psychiatric Review Technique Form (PRTF).",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1"
+        },
+        {
+          "header": true,
+          "question": "Summary conclusions",
+          "linkId": "/46612-8",
+          "questionCodeSystem": "http://loinc.org",
+          "questionCode": "46612-8",
+          "codingInstructions": "This section is for recording summary conclusions derived from the evidence in file.  Each mental activity is to be within the context of the individual's capacity to sustain that activity over a normal workday and workweek, on an ongoing basis. Detailed explanation of the degree of limitation for each category (A through D), as well as any other assessment information you deem appropriate, is to be recorded in Section III (Functional Capacity Assessment).\r\nIf rating category 5 is checked for any of the following items, you MUST specify in Section II the evidence that is needed to make the assessment. II you conclude that the record is so inadequately documented that no accurate functional capacity assessment can be made, indicate in Section II what development is necessary, but DO NOT COMPLETE SECTION III.",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "items": [
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "Remembers locations & worklike procedures",
+              "linkId": "/46612-8/46613-6",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "46613-6",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not significantly limited",
+                  "code": "LA6459-7",
+                  "system": null,
+                  "label": "1",
+                  "score": null
+                },
+                {
+                  "text": "Moderately limited",
+                  "code": "LA6460-5",
+                  "system": null,
+                  "label": "2",
+                  "score": null
+                },
+                {
+                  "text": "Markedly limited",
+                  "code": "LA6461-3",
+                  "system": null,
+                  "label": "3",
+                  "score": null
+                },
+                {
+                  "text": "No evidence of limitation in this category",
+                  "code": "LA6462-1",
+                  "system": null,
+                  "label": "4",
+                  "score": null
+                },
+                {
+                  "text": "Not ratable on available evidence",
+                  "code": "LA6463-9",
+                  "system": null,
+                  "label": "5",
+                  "score": null
+                }
+              ]
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "Understands & remembers very short & simple instructions",
+              "linkId": "/46612-8/46614-4",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "46614-4",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not significantly limited",
+                  "code": "LA6459-7",
+                  "system": null,
+                  "label": "1",
+                  "score": null
+                },
+                {
+                  "text": "Moderately limited",
+                  "code": "LA6460-5",
+                  "system": null,
+                  "label": "2",
+                  "score": null
+                },
+                {
+                  "text": "Markedly limited",
+                  "code": "LA6461-3",
+                  "system": null,
+                  "label": "3",
+                  "score": null
+                },
+                {
+                  "text": "No evidence of limitation in this category",
+                  "code": "LA6462-1",
+                  "system": null,
+                  "label": "4",
+                  "score": null
+                },
+                {
+                  "text": "Not ratable on available evidence",
+                  "code": "LA6463-9",
+                  "system": null,
+                  "label": "5",
+                  "score": null
+                }
+              ]
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "Understands & remembers detailed instructions",
+              "linkId": "/46612-8/46615-1",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "46615-1",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not significantly limited",
+                  "code": "LA6459-7",
+                  "system": null,
+                  "label": "1",
+                  "score": null
+                },
+                {
+                  "text": "Moderately limited",
+                  "code": "LA6460-5",
+                  "system": null,
+                  "label": "2",
+                  "score": null
+                },
+                {
+                  "text": "Markedly limited",
+                  "code": "LA6461-3",
+                  "system": null,
+                  "label": "3",
+                  "score": null
+                },
+                {
+                  "text": "No evidence of limitation in this category",
+                  "code": "LA6462-1",
+                  "system": null,
+                  "label": "4",
+                  "score": null
+                },
+                {
+                  "text": "Not ratable on available evidence",
+                  "code": "LA6463-9",
+                  "system": null,
+                  "label": "5",
+                  "score": null
+                }
+              ]
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "Carries out very short & simple instructions",
+              "linkId": "/46612-8/46616-9",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "46616-9",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not significantly limited",
+                  "code": "LA6459-7",
+                  "system": null,
+                  "label": "1",
+                  "score": null
+                },
+                {
+                  "text": "Moderately limited",
+                  "code": "LA6460-5",
+                  "system": null,
+                  "label": "2",
+                  "score": null
+                },
+                {
+                  "text": "Markedly limited",
+                  "code": "LA6461-3",
+                  "system": null,
+                  "label": "3",
+                  "score": null
+                },
+                {
+                  "text": "No evidence of limitation in this category",
+                  "code": "LA6462-1",
+                  "system": null,
+                  "label": "4",
+                  "score": null
+                },
+                {
+                  "text": "Not ratable on available evidence",
+                  "code": "LA6463-9",
+                  "system": null,
+                  "label": "5",
+                  "score": null
+                }
+              ]
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "Carries out detailed instructions",
+              "linkId": "/46612-8/46617-7",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "46617-7",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not significantly limited",
+                  "code": "LA6459-7",
+                  "system": null,
+                  "label": "1",
+                  "score": null
+                },
+                {
+                  "text": "Moderately limited",
+                  "code": "LA6460-5",
+                  "system": null,
+                  "label": "2",
+                  "score": null
+                },
+                {
+                  "text": "Markedly limited",
+                  "code": "LA6461-3",
+                  "system": null,
+                  "label": "3",
+                  "score": null
+                },
+                {
+                  "text": "No evidence of limitation in this category",
+                  "code": "LA6462-1",
+                  "system": null,
+                  "label": "4",
+                  "score": null
+                },
+                {
+                  "text": "Not ratable on available evidence",
+                  "code": "LA6463-9",
+                  "system": null,
+                  "label": "5",
+                  "score": null
+                }
+              ]
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "Maintains attention & concentration for extended periods",
+              "linkId": "/46612-8/46618-5",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "46618-5",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not significantly limited",
+                  "code": "LA6459-7",
+                  "system": null,
+                  "label": "1",
+                  "score": null
+                },
+                {
+                  "text": "Moderately limited",
+                  "code": "LA6460-5",
+                  "system": null,
+                  "label": "2",
+                  "score": null
+                },
+                {
+                  "text": "Markedly limited",
+                  "code": "LA6461-3",
+                  "system": null,
+                  "label": "3",
+                  "score": null
+                },
+                {
+                  "text": "No evidence of limitation in this category",
+                  "code": "LA6462-1",
+                  "system": null,
+                  "label": "4",
+                  "score": null
+                },
+                {
+                  "text": "Not ratable on available evidence",
+                  "code": "LA6463-9",
+                  "system": null,
+                  "label": "5",
+                  "score": null
+                }
+              ]
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "Performs activities within a schedule, maintains regular attendance, is punctual within customary tolerances",
+              "linkId": "/46612-8/46619-3",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "46619-3",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not significantly limited",
+                  "code": "LA6459-7",
+                  "system": null,
+                  "label": "1",
+                  "score": null
+                },
+                {
+                  "text": "Moderately limited",
+                  "code": "LA6460-5",
+                  "system": null,
+                  "label": "2",
+                  "score": null
+                },
+                {
+                  "text": "Markedly limited",
+                  "code": "LA6461-3",
+                  "system": null,
+                  "label": "3",
+                  "score": null
+                },
+                {
+                  "text": "No evidence of limitation in this category",
+                  "code": "LA6462-1",
+                  "system": null,
+                  "label": "4",
+                  "score": null
+                },
+                {
+                  "text": "Not ratable on available evidence",
+                  "code": "LA6463-9",
+                  "system": null,
+                  "label": "5",
+                  "score": null
+                }
+              ]
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "Sustains an ordinary routine without special supervision",
+              "linkId": "/46612-8/46620-1",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "46620-1",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not significantly limited",
+                  "code": "LA6459-7",
+                  "system": null,
+                  "label": "1",
+                  "score": null
+                },
+                {
+                  "text": "Moderately limited",
+                  "code": "LA6460-5",
+                  "system": null,
+                  "label": "2",
+                  "score": null
+                },
+                {
+                  "text": "Markedly limited",
+                  "code": "LA6461-3",
+                  "system": null,
+                  "label": "3",
+                  "score": null
+                },
+                {
+                  "text": "No evidence of limitation in this category",
+                  "code": "LA6462-1",
+                  "system": null,
+                  "label": "4",
+                  "score": null
+                },
+                {
+                  "text": "Not ratable on available evidence",
+                  "code": "LA6463-9",
+                  "system": null,
+                  "label": "5",
+                  "score": null
+                }
+              ]
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "Works in coordination with or proximity to others without being distracted by them",
+              "linkId": "/46612-8/46621-9",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "46621-9",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not significantly limited",
+                  "code": "LA6459-7",
+                  "system": null,
+                  "label": "1",
+                  "score": null
+                },
+                {
+                  "text": "Moderately limited",
+                  "code": "LA6460-5",
+                  "system": null,
+                  "label": "2",
+                  "score": null
+                },
+                {
+                  "text": "Markedly limited",
+                  "code": "LA6461-3",
+                  "system": null,
+                  "label": "3",
+                  "score": null
+                },
+                {
+                  "text": "No evidence of limitation in this category",
+                  "code": "LA6462-1",
+                  "system": null,
+                  "label": "4",
+                  "score": null
+                },
+                {
+                  "text": "Not ratable on available evidence",
+                  "code": "LA6463-9",
+                  "system": null,
+                  "label": "5",
+                  "score": null
+                }
+              ]
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "Makes simple work-related decisions",
+              "linkId": "/46612-8/46622-7",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "46622-7",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not significantly limited",
+                  "code": "LA6459-7",
+                  "system": null,
+                  "label": "1",
+                  "score": null
+                },
+                {
+                  "text": "Moderately limited",
+                  "code": "LA6460-5",
+                  "system": null,
+                  "label": "2",
+                  "score": null
+                },
+                {
+                  "text": "Markedly limited",
+                  "code": "LA6461-3",
+                  "system": null,
+                  "label": "3",
+                  "score": null
+                },
+                {
+                  "text": "No evidence of limitation in this category",
+                  "code": "LA6462-1",
+                  "system": null,
+                  "label": "4",
+                  "score": null
+                },
+                {
+                  "text": "Not ratable on available evidence",
+                  "code": "LA6463-9",
+                  "system": null,
+                  "label": "5",
+                  "score": null
+                }
+              ]
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "Completes normal workday & week WO interruptions from psych symptoms & performs at consistent pace WO unreasonable number & length of rests",
+              "linkId": "/46612-8/46623-5",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "46623-5",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not significantly limited",
+                  "code": "LA6459-7",
+                  "system": null,
+                  "label": "1",
+                  "score": null
+                },
+                {
+                  "text": "Moderately limited",
+                  "code": "LA6460-5",
+                  "system": null,
+                  "label": "2",
+                  "score": null
+                },
+                {
+                  "text": "Markedly limited",
+                  "code": "LA6461-3",
+                  "system": null,
+                  "label": "3",
+                  "score": null
+                },
+                {
+                  "text": "No evidence of limitation in this category",
+                  "code": "LA6462-1",
+                  "system": null,
+                  "label": "4",
+                  "score": null
+                },
+                {
+                  "text": "Not ratable on available evidence",
+                  "code": "LA6463-9",
+                  "system": null,
+                  "label": "5",
+                  "score": null
+                }
+              ]
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "Interacts appropriately with the general public",
+              "linkId": "/46612-8/46624-3",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "46624-3",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not significantly limited",
+                  "code": "LA6459-7",
+                  "system": null,
+                  "label": "1",
+                  "score": null
+                },
+                {
+                  "text": "Moderately limited",
+                  "code": "LA6460-5",
+                  "system": null,
+                  "label": "2",
+                  "score": null
+                },
+                {
+                  "text": "Markedly limited",
+                  "code": "LA6461-3",
+                  "system": null,
+                  "label": "3",
+                  "score": null
+                },
+                {
+                  "text": "No evidence of limitation in this category",
+                  "code": "LA6462-1",
+                  "system": null,
+                  "label": "4",
+                  "score": null
+                },
+                {
+                  "text": "Not ratable on available evidence",
+                  "code": "LA6463-9",
+                  "system": null,
+                  "label": "5",
+                  "score": null
+                }
+              ]
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "Asks simple questions or request assistance",
+              "linkId": "/46612-8/46625-0",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "46625-0",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not significantly limited",
+                  "code": "LA6459-7",
+                  "system": null,
+                  "label": "1",
+                  "score": null
+                },
+                {
+                  "text": "Moderately limited",
+                  "code": "LA6460-5",
+                  "system": null,
+                  "label": "2",
+                  "score": null
+                },
+                {
+                  "text": "Markedly limited",
+                  "code": "LA6461-3",
+                  "system": null,
+                  "label": "3",
+                  "score": null
+                },
+                {
+                  "text": "No evidence of limitation in this category",
+                  "code": "LA6462-1",
+                  "system": null,
+                  "label": "4",
+                  "score": null
+                },
+                {
+                  "text": "Not ratable on available evidence",
+                  "code": "LA6463-9",
+                  "system": null,
+                  "label": "5",
+                  "score": null
+                }
+              ]
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "Accepts instructions & respond appropriately to criticism from supervisors",
+              "linkId": "/46612-8/46626-8",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "46626-8",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not significantly limited",
+                  "code": "LA6459-7",
+                  "system": null,
+                  "label": "1",
+                  "score": null
+                },
+                {
+                  "text": "Moderately limited",
+                  "code": "LA6460-5",
+                  "system": null,
+                  "label": "2",
+                  "score": null
+                },
+                {
+                  "text": "Markedly limited",
+                  "code": "LA6461-3",
+                  "system": null,
+                  "label": "3",
+                  "score": null
+                },
+                {
+                  "text": "No evidence of limitation in this category",
+                  "code": "LA6462-1",
+                  "system": null,
+                  "label": "4",
+                  "score": null
+                },
+                {
+                  "text": "Not ratable on available evidence",
+                  "code": "LA6463-9",
+                  "system": null,
+                  "label": "5",
+                  "score": null
+                }
+              ]
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "Gets along with coworkers or peers WO distracting them or exhibiting behavioral extremes",
+              "linkId": "/46612-8/46627-6",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "46627-6",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not significantly limited",
+                  "code": "LA6459-7",
+                  "system": null,
+                  "label": "1",
+                  "score": null
+                },
+                {
+                  "text": "Moderately limited",
+                  "code": "LA6460-5",
+                  "system": null,
+                  "label": "2",
+                  "score": null
+                },
+                {
+                  "text": "Markedly limited",
+                  "code": "LA6461-3",
+                  "system": null,
+                  "label": "3",
+                  "score": null
+                },
+                {
+                  "text": "No evidence of limitation in this category",
+                  "code": "LA6462-1",
+                  "system": null,
+                  "label": "4",
+                  "score": null
+                },
+                {
+                  "text": "Not ratable on available evidence",
+                  "code": "LA6463-9",
+                  "system": null,
+                  "label": "5",
+                  "score": null
+                }
+              ]
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "Maintains socially appropriate behavior & adheres to basic standards of neatness & cleanliness",
+              "linkId": "/46612-8/46628-4",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "46628-4",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not significantly limited",
+                  "code": "LA6459-7",
+                  "system": null,
+                  "label": "1",
+                  "score": null
+                },
+                {
+                  "text": "Moderately limited",
+                  "code": "LA6460-5",
+                  "system": null,
+                  "label": "2",
+                  "score": null
+                },
+                {
+                  "text": "Markedly limited",
+                  "code": "LA6461-3",
+                  "system": null,
+                  "label": "3",
+                  "score": null
+                },
+                {
+                  "text": "No evidence of limitation in this category",
+                  "code": "LA6462-1",
+                  "system": null,
+                  "label": "4",
+                  "score": null
+                },
+                {
+                  "text": "Not ratable on available evidence",
+                  "code": "LA6463-9",
+                  "system": null,
+                  "label": "5",
+                  "score": null
+                }
+              ]
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "Responds appropriately to changes in the work setting",
+              "linkId": "/46612-8/46629-2",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "46629-2",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not significantly limited",
+                  "code": "LA6459-7",
+                  "system": null,
+                  "label": "1",
+                  "score": null
+                },
+                {
+                  "text": "Moderately limited",
+                  "code": "LA6460-5",
+                  "system": null,
+                  "label": "2",
+                  "score": null
+                },
+                {
+                  "text": "Markedly limited",
+                  "code": "LA6461-3",
+                  "system": null,
+                  "label": "3",
+                  "score": null
+                },
+                {
+                  "text": "No evidence of limitation in this category",
+                  "code": "LA6462-1",
+                  "system": null,
+                  "label": "4",
+                  "score": null
+                },
+                {
+                  "text": "Not ratable on available evidence",
+                  "code": "LA6463-9",
+                  "system": null,
+                  "label": "5",
+                  "score": null
+                }
+              ]
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "Aware of normal hazards & take appropriate precautions",
+              "linkId": "/46612-8/46630-0",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "46630-0",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not significantly limited",
+                  "code": "LA6459-7",
+                  "system": null,
+                  "label": "1",
+                  "score": null
+                },
+                {
+                  "text": "Moderately limited",
+                  "code": "LA6460-5",
+                  "system": null,
+                  "label": "2",
+                  "score": null
+                },
+                {
+                  "text": "Markedly limited",
+                  "code": "LA6461-3",
+                  "system": null,
+                  "label": "3",
+                  "score": null
+                },
+                {
+                  "text": "No evidence of limitation in this category",
+                  "code": "LA6462-1",
+                  "system": null,
+                  "label": "4",
+                  "score": null
+                },
+                {
+                  "text": "Not ratable on available evidence",
+                  "code": "LA6463-9",
+                  "system": null,
+                  "label": "5",
+                  "score": null
+                }
+              ]
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "Travels in unfamiliar places or use public transportation",
+              "linkId": "/46612-8/46631-8",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "46631-8",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not significantly limited",
+                  "code": "LA6459-7",
+                  "system": null,
+                  "label": "1",
+                  "score": null
+                },
+                {
+                  "text": "Moderately limited",
+                  "code": "LA6460-5",
+                  "system": null,
+                  "label": "2",
+                  "score": null
+                },
+                {
+                  "text": "Markedly limited",
+                  "code": "LA6461-3",
+                  "system": null,
+                  "label": "3",
+                  "score": null
+                },
+                {
+                  "text": "No evidence of limitation in this category",
+                  "code": "LA6462-1",
+                  "system": null,
+                  "label": "4",
+                  "score": null
+                },
+                {
+                  "text": "Not ratable on available evidence",
+                  "code": "LA6463-9",
+                  "system": null,
+                  "label": "5",
+                  "score": null
+                }
+              ]
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "Sets realistic goals or make plans independently of others",
+              "linkId": "/46612-8/46632-6",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "46632-6",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not significantly limited",
+                  "code": "LA6459-7",
+                  "system": null,
+                  "label": "1",
+                  "score": null
+                },
+                {
+                  "text": "Moderately limited",
+                  "code": "LA6460-5",
+                  "system": null,
+                  "label": "2",
+                  "score": null
+                },
+                {
+                  "text": "Markedly limited",
+                  "code": "LA6461-3",
+                  "system": null,
+                  "label": "3",
+                  "score": null
+                },
+                {
+                  "text": "No evidence of limitation in this category",
+                  "code": "LA6462-1",
+                  "system": null,
+                  "label": "4",
+                  "score": null
+                },
+                {
+                  "text": "Not ratable on available evidence",
+                  "code": "LA6463-9",
+                  "system": null,
+                  "label": "5",
+                  "score": null
+                }
+              ]
+            },
+            {
+              "header": false,
+              "dataType": "ST",
+              "question": "Remarks",
+              "linkId": "/46612-8/46633-4",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "46633-4",
+              "codingInstructions": "If you checked box 5 for any of the preceding items or if any other documentation deficiencies were identified, you MUST specify what additional documentation is needed. Cite the item number(s), as well as any other specific deficiency, and indicate the development to be undertaken.",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1"
+            }
+          ]
+        },
+        {
+          "header": false,
+          "dataType": "ST",
+          "question": "Functional capacity assessment",
+          "linkId": "/46634-2",
+          "questionCodeSystem": "http://loinc.org",
+          "questionCode": "46634-2",
+          "codingInstructions": "Record in this section the elaborations on the preceding capacities, Complete this section ONLY after the SUMMARY CONCLUSIONS section has been completed- Explain your summary conclusions in narrative form. Include any information which clarifies limitation or Junction. Be especially careful to explain conclusions that differ from those Of treating medical sources or from the individual's allegations.",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1"
+        }
+      ]
+    },
+    {
+      "header": true,
+      "question": "Functional Assessment of Chronic Illness Therapy-Fatigue Questionnaire - version 4 (FACIT-F)",
+      "linkId": "/70726-5",
+      "questionCodeSystem": "http://loinc.org",
+      "questionCode": "70726-5",
+      "codingInstructions": "Functional Assessment of Chronic Illness Therapy-Fatigue",
+      "questionCardinality": {
+        "min": "1",
+        "max": "1"
+      },
+      "answerCardinality": {
+        "min": "0",
+        "max": "1"
+      },
+      "editable": "1",
+      "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D.",
+      "lformsVersion": "25.0.0",
+      "items": [
+        {
+          "header": true,
+          "question": "Physical well being",
+          "linkId": "/70498-1",
+          "questionCodeSystem": "http://loinc.org",
+          "questionCode": "70498-1",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D.",
+          "items": [
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I have a lack of energy",
+              "linkId": "/70498-1/70405-6",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70405-6",
+              "localQuestionCode": "GP1",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I have nausea",
+              "linkId": "/70498-1/70406-4",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70406-4",
+              "localQuestionCode": "GP2",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "Because of my physical condition, I have trouble meeting the needs of my family",
+              "linkId": "/70498-1/70407-2",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70407-2",
+              "localQuestionCode": "GP3",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I have pain",
+              "linkId": "/70498-1/70408-0",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70408-0",
+              "localQuestionCode": "GP4",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I am bothered by side effects of treatment",
+              "linkId": "/70498-1/70409-8",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70409-8",
+              "localQuestionCode": "GP5",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I feel ill",
+              "linkId": "/70498-1/70410-6",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70410-6",
+              "localQuestionCode": "GP6",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I am forced to spend time in bed",
+              "linkId": "/70498-1/70411-4",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70411-4",
+              "localQuestionCode": "GP7",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            }
+          ]
+        },
+        {
+          "header": true,
+          "question": "Social - family well being",
+          "linkId": "/70499-9",
+          "questionCodeSystem": "http://loinc.org",
+          "questionCode": "70499-9",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D.",
+          "items": [
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I feel close to my friends",
+              "linkId": "/70499-9/70412-2",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70412-2",
+              "localQuestionCode": "GS1",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I get emotional support from my family",
+              "linkId": "/70499-9/70413-0",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70413-0",
+              "localQuestionCode": "GS2",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I get support from my friends",
+              "linkId": "/70499-9/70414-8",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70414-8",
+              "localQuestionCode": "GS3",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "My family has accepted my illness",
+              "linkId": "/70499-9/70415-5",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70415-5",
+              "localQuestionCode": "GS4",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I am satisfied with family communication about my illness",
+              "linkId": "/70499-9/70416-3",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70416-3",
+              "localQuestionCode": "GS5",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I felt close to my partner, or the person who is my main support",
+              "linkId": "/70499-9/70417-1",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70417-1",
+              "localQuestionCode": "GS6",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "Regardless of your current level of sexual activity, please answer the following question. If you prefer not to answer it, please mark this box and go to the next section.",
+              "linkId": "/70499-9/70914-7",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70914-7",
+              "localQuestionCode": "Q1",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Yes",
+                  "code": "LA33-6",
+                  "system": null,
+                  "label": null,
+                  "score": null
+                },
+                {
+                  "text": "No",
+                  "code": "LA32-8",
+                  "system": null,
+                  "label": null,
+                  "score": null
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I am satisfied with my sex life",
+              "linkId": "/70499-9/70418-9",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70418-9",
+              "localQuestionCode": "GS7",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            }
+          ]
+        },
+        {
+          "header": true,
+          "question": "Emotional well being",
+          "linkId": "/70500-4",
+          "questionCodeSystem": "http://loinc.org",
+          "questionCode": "70500-4",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D.",
+          "items": [
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I feel sad",
+              "linkId": "/70500-4/70392-6",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70392-6",
+              "localQuestionCode": "GE1",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I am satisfied with how I am coping with my illness",
+              "linkId": "/70500-4/70393-4",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70393-4",
+              "localQuestionCode": "GE2",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I am losing hope in the fight against my illness",
+              "linkId": "/70500-4/70394-2",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70394-2",
+              "localQuestionCode": "GE3",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I am nervous",
+              "linkId": "/70500-4/70395-9",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70395-9",
+              "localQuestionCode": "GE4",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I worry about dying",
+              "linkId": "/70500-4/70396-7",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70396-7",
+              "localQuestionCode": "GE5",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I worry that my condition will get worse",
+              "linkId": "/70500-4/70397-5",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70397-5",
+              "localQuestionCode": "GE6",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            }
+          ]
+        },
+        {
+          "header": true,
+          "question": "Functional well being",
+          "linkId": "/70501-2",
+          "questionCodeSystem": "http://loinc.org",
+          "questionCode": "70501-2",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D.",
+          "items": [
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I am able to work  (include work at home)",
+              "linkId": "/70501-2/70398-3",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70398-3",
+              "localQuestionCode": "GF1",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "My work  (include work at home) is fulfilling",
+              "linkId": "/70501-2/70399-1",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70399-1",
+              "localQuestionCode": "GF2",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I am able to enjoy life",
+              "linkId": "/70501-2/70400-7",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70400-7",
+              "localQuestionCode": "GF3",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I have accepted my illness",
+              "linkId": "/70501-2/70401-5",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70401-5",
+              "localQuestionCode": "GF4",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I am sleeping well",
+              "linkId": "/70501-2/70402-3",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70402-3",
+              "localQuestionCode": "GF5",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I am enjoying the things I usually do for fun",
+              "linkId": "/70501-2/70403-1",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70403-1",
+              "localQuestionCode": "GF6",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I am content with the quality of my life right now",
+              "linkId": "/70501-2/70404-9",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70404-9",
+              "localQuestionCode": "GF7",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            }
+          ]
+        },
+        {
+          "header": true,
+          "question": "Additional concerns - FACIT-F",
+          "linkId": "/70895-8",
+          "questionCodeSystem": "http://loinc.org",
+          "questionCode": "70895-8",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D.",
+          "items": [
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I feel fatigued",
+              "linkId": "/70895-8/70426-2",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70426-2",
+              "localQuestionCode": "HI7",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I feel weak all over",
+              "linkId": "/70895-8/70425-4",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70425-4",
+              "localQuestionCode": "HI12",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I feel listless (\"washed out\")",
+              "linkId": "/70895-8/70727-3",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70727-3",
+              "localQuestionCode": "An1",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I feel tired",
+              "linkId": "/70895-8/70304-1",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70304-1",
+              "localQuestionCode": "An2",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I have trouble starting things because I am tired",
+              "linkId": "/70895-8/70728-1",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70728-1",
+              "localQuestionCode": "An3",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I have trouble finishing things because I am tired",
+              "linkId": "/70895-8/70729-9",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70729-9",
+              "localQuestionCode": "An4",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I have energy",
+              "linkId": "/70895-8/70730-7",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70730-7",
+              "localQuestionCode": "An5",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "During the past 7 days - I am able to do my usual activities",
+              "linkId": "/70895-8/61890-0",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "61890-0",
+              "localQuestionCode": "An7",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "5",
+                  "score": 5
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 PROMIS Health Organization or other individuals/entities that have contributed information and materials to Assessment Center, and are being used with the permission of the copyright holders. Use of PROMIS instruments (e.g., item banks, short forms, profile measures) are subject to the PROMIS Terms and Conditions available at: http://www.assessmentcenter.net/TandC.aspx"
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I need to sleep during the day",
+              "linkId": "/70895-8/70731-5",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70731-5",
+              "localQuestionCode": "An8",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I am too tired to eat",
+              "linkId": "/70895-8/70732-3",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70732-3",
+              "localQuestionCode": "An12",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I need help doing my usual activities",
+              "linkId": "/70895-8/70303-3",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70303-3",
+              "localQuestionCode": "An14",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I am frustrated by being too tired to do the things I want to do",
+              "linkId": "/70895-8/70733-1",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70733-1",
+              "localQuestionCode": "An15",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            },
+            {
+              "header": false,
+              "dataType": "CNE",
+              "question": "I have to limit my social activity because I am tired",
+              "linkId": "/70895-8/70734-9",
+              "questionCodeSystem": "http://loinc.org",
+              "questionCode": "70734-9",
+              "localQuestionCode": "An16",
+              "questionCardinality": {
+                "min": "1",
+                "max": "1"
+              },
+              "answerCardinality": {
+                "min": "0",
+                "max": "1"
+              },
+              "editable": "1",
+              "answers": [
+                {
+                  "text": "Not at all",
+                  "code": "LA6568-5",
+                  "system": null,
+                  "label": "0",
+                  "score": 0
+                },
+                {
+                  "text": "A little bit",
+                  "code": "LA13863-8",
+                  "system": null,
+                  "label": "1",
+                  "score": 1
+                },
+                {
+                  "text": "Somewhat",
+                  "code": "LA13909-9",
+                  "system": null,
+                  "label": "2",
+                  "score": 2
+                },
+                {
+                  "text": "Quite a bit",
+                  "code": "LA13902-4",
+                  "system": null,
+                  "label": "3",
+                  "score": 3
+                },
+                {
+                  "text": "Very much",
+                  "code": "LA13914-9",
+                  "system": null,
+                  "label": "4",
+                  "score": 4
+                }
+              ],
+              "copyrightNotice": "Copyright © 2010 FACIT.org. Used with permission. All translations, adaptations, symptom indices, computer programs, and scoring algorithms, and any other related documents of the Functional Assessment of Chronic Illness Therapy (FACIT) Measurement System, including the Functional Assessment of Cancer Therapy (FACT), are owned and copyrighted by, and the intellectual property of, David Cella, Ph.D."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "header": true,
+      "question": "PROMIS short form - applied cognition - general concerns 4a - version 1.0",
+      "linkId": "/90961-4",
+      "questionCodeSystem": "http://loinc.org",
+      "questionCode": "90961-4",
+      "questionCardinality": {
+        "min": "1",
+        "max": "1"
+      },
+      "answerCardinality": {
+        "min": "0",
+        "max": "1"
+      },
+      "editable": "1",
+      "copyrightNotice": "Copyright © 2010 PROMIS Health Organization or other individuals/entities that have contributed information and materials to Assessment Center, and are being used with the permission of the copyright holders. Use of PROMIS instruments (e.g., item banks, short forms, profile measures) are subject to the PROMIS Terms and Conditions available at: http://www.assessmentcenter.net/TandC.aspx",
+      "lformsVersion": "25.0.0",
+      "items": [
+        {
+          "header": false,
+          "dataType": "CNE",
+          "question": "In the past 7 days - My thinking has been slow",
+          "linkId": "/81461-6",
+          "questionCodeSystem": "http://loinc.org",
+          "questionCode": "81461-6",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "answers": [
+            {
+              "text": "Never",
+              "code": "LA6270-8",
+              "system": null,
+              "label": "5",
+              "score": 5
+            },
+            {
+              "text": "Rarely (once)",
+              "code": "LA17826-1",
+              "system": null,
+              "label": "4",
+              "score": 4
+            },
+            {
+              "text": "Sometimes (2-3 times)",
+              "code": "LA17827-9",
+              "system": null,
+              "label": "3",
+              "score": 3
+            },
+            {
+              "text": "Often (once a day)",
+              "code": "LA17828-7",
+              "system": null,
+              "label": "2",
+              "score": 2
+            },
+            {
+              "text": "Very often (Several times a day)",
+              "code": "LA17829-5",
+              "system": null,
+              "label": "1",
+              "score": 1
+            }
+          ],
+          "copyrightNotice": "Copyright © 2010 PROMIS Health Organization or other individuals/entities that have contributed information and materials to Assessment Center, and are being used with the permission of the copyright holders. Use of PROMIS instruments (e.g., item banks, short forms, profile measures) are subject to the PROMIS Terms and Conditions available at: http://www.assessmentcenter.net/TandC.aspx"
+        },
+        {
+          "header": false,
+          "dataType": "CNE",
+          "question": "In the past 7 days - It has seemed like my brain was not working as well as usual",
+          "linkId": "/81478-0",
+          "questionCodeSystem": "http://loinc.org",
+          "questionCode": "81478-0",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "answers": [
+            {
+              "text": "Never",
+              "code": "LA6270-8",
+              "system": null,
+              "label": "5",
+              "score": 5
+            },
+            {
+              "text": "Rarely (once)",
+              "code": "LA17826-1",
+              "system": null,
+              "label": "4",
+              "score": 4
+            },
+            {
+              "text": "Sometimes (2-3 times)",
+              "code": "LA17827-9",
+              "system": null,
+              "label": "3",
+              "score": 3
+            },
+            {
+              "text": "Often (once a day)",
+              "code": "LA17828-7",
+              "system": null,
+              "label": "2",
+              "score": 2
+            },
+            {
+              "text": "Very often (Several times a day)",
+              "code": "LA17829-5",
+              "system": null,
+              "label": "1",
+              "score": 1
+            }
+          ],
+          "copyrightNotice": "Copyright © 2010 PROMIS Health Organization or other individuals/entities that have contributed information and materials to Assessment Center, and are being used with the permission of the copyright holders. Use of PROMIS instruments (e.g., item banks, short forms, profile measures) are subject to the PROMIS Terms and Conditions available at: http://www.assessmentcenter.net/TandC.aspx"
+        },
+        {
+          "header": false,
+          "dataType": "CNE",
+          "question": "In the past 7 days - I have had to work harder than usual to keep track of what I was doing",
+          "linkId": "/81479-8",
+          "questionCodeSystem": "http://loinc.org",
+          "questionCode": "81479-8",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "answers": [
+            {
+              "text": "Never",
+              "code": "LA6270-8",
+              "system": null,
+              "label": "5",
+              "score": 5
+            },
+            {
+              "text": "Rarely (once)",
+              "code": "LA17826-1",
+              "system": null,
+              "label": "4",
+              "score": 4
+            },
+            {
+              "text": "Sometimes (2-3 times)",
+              "code": "LA17827-9",
+              "system": null,
+              "label": "3",
+              "score": 3
+            },
+            {
+              "text": "Often (once a day)",
+              "code": "LA17828-7",
+              "system": null,
+              "label": "2",
+              "score": 2
+            },
+            {
+              "text": "Very often (Several times a day)",
+              "code": "LA17829-5",
+              "system": null,
+              "label": "1",
+              "score": 1
+            }
+          ],
+          "copyrightNotice": "Copyright © 2010 PROMIS Health Organization or other individuals/entities that have contributed information and materials to Assessment Center, and are being used with the permission of the copyright holders. Use of PROMIS instruments (e.g., item banks, short forms, profile measures) are subject to the PROMIS Terms and Conditions available at: http://www.assessmentcenter.net/TandC.aspx"
+        },
+        {
+          "header": false,
+          "dataType": "CNE",
+          "question": "In the past 7 days - I have had trouble shifting back and forth between different activities that require thinking",
+          "linkId": "/81485-5",
+          "questionCodeSystem": "http://loinc.org",
+          "questionCode": "81485-5",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "answers": [
+            {
+              "text": "Never",
+              "code": "LA6270-8",
+              "system": null,
+              "label": "5",
+              "score": 5
+            },
+            {
+              "text": "Rarely (once)",
+              "code": "LA17826-1",
+              "system": null,
+              "label": "4",
+              "score": 4
+            },
+            {
+              "text": "Sometimes (2-3 times)",
+              "code": "LA17827-9",
+              "system": null,
+              "label": "3",
+              "score": 3
+            },
+            {
+              "text": "Often (once a day)",
+              "code": "LA17828-7",
+              "system": null,
+              "label": "2",
+              "score": 2
+            },
+            {
+              "text": "Very often (Several times a day)",
+              "code": "LA17829-5",
+              "system": null,
+              "label": "1",
+              "score": 1
+            }
+          ],
+          "copyrightNotice": "Copyright © 2010 PROMIS Health Organization or other individuals/entities that have contributed information and materials to Assessment Center, and are being used with the permission of the copyright holders. Use of PROMIS instruments (e.g., item banks, short forms, profile measures) are subject to the PROMIS Terms and Conditions available at: http://www.assessmentcenter.net/TandC.aspx"
+        },
+        {
+          "header": false,
+          "dataType": "REAL",
+          "question": "PROMIS short form - applied cognition - general concerns 4a - version 1.0 raw score",
+          "linkId": "/90962-2",
+          "questionCodeSystem": "http://loinc.org",
+          "questionCode": "90962-2",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "units": [
+            {
+              "name": "{score}"
+            }
+          ],
+          "calculationMethod": {
+            "name": "TOTALSCORE"
+          },
+          "copyrightNotice": "Copyright © 2010 PROMIS Health Organization or other individuals/entities that have contributed information and materials to Assessment Center, and are being used with the permission of the copyright holders. Use of PROMIS instruments (e.g., item banks, short forms, profile measures) are subject to the PROMIS Terms and Conditions available at: http://www.assessmentcenter.net/TandC.aspx"
+        },
+        {
+          "header": false,
+          "dataType": "REAL",
+          "question": "PROMIS applied cognitive - general concerns - version 1.0 T-Score",
+          "linkId": "/90762-6",
+          "questionCodeSystem": "http://loinc.org",
+          "questionCode": "90762-6",
+          "questionCardinality": {
+            "min": "1",
+            "max": "1"
+          },
+          "answerCardinality": {
+            "min": "0",
+            "max": "1"
+          },
+          "editable": "1",
+          "units": [
+            {
+              "name": "{Tscore}"
+            }
+          ],
+          "copyrightNotice": "Copyright © 2010 PROMIS Health Organization or other individuals/entities that have contributed information and materials to Assessment Center, and are being used with the permission of the copyright holders. Use of PROMIS instruments (e.g., item banks, short forms, profile measures) are subject to the PROMIS Terms and Conditions available at: http://www.assessmentcenter.net/TandC.aspx"
+        }
+      ]
+    }
+  ]
+}

@@ -4,6 +4,7 @@ This guide outlines how to set up the LHC-Forms toolkit in a standards-based pro
 1. Add LForms to Your Project
 Include the LForms JS and CSS in your HTML.
 You can use CDN links for demo/prototype purposes.
+(refer to [https://lhncbc.github.io/lforms/](https://lhncbc.github.io/lforms) for most recent CDN links)
 
 ```html
 <!-- In your main HTML file -->

@@ -130,6 +130,9 @@ Data types, validation rules, and coding (e.g., LOINC codes)
 How it’s used:
 The web portal loads this JSON file and renders it as an interactive form for patients. After the patient fills it out, their responses are structured as a FHIR QuestionnaireResponse for downstream processing, storage, or integration with other healthcare systems.
 
+🌐 Live Preview
+Want to see it in action? Visit [miniportal.html] (miniportal.html), which dynamically loads and renders 9-sections.lforms.json inside the page.
+
 ### 📄 PHQ-9 Questionnaire
 
 FHIR-compliant structured Questionnaire.

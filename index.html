@@ -192,6 +192,88 @@
   </p>
 </section>
 
+      <section aria-labelledby="ehr-section-title">
+  <h2 id="ehr-section-title">🧠 Mental Health EHR Prototype: PROM Questionnaire</h2>
+
+  <details>
+    <summary><strong>Explore available sections and project reflection</strong></summary>
+
+    <div style="margin-top: 1.5rem;">
+      <p>
+        This experimental prototype models how patients might complete mental health–related forms inside a standards-ready personal health record (PHR) system.  
+        It uses <strong>LHC-Forms widgets</strong> and a JSON structure compatible with HL7 FHIR and LOINC.
+      </p>
+
+      <p>
+        <strong>Design logic:</strong> The form includes <strong>9 distinct sections</strong>, but the patient is only expected to choose and complete <em>one section</em> per session based on relevance, mood, or clinician suggestion.
+      </p>
+
+      <ul>
+        <li>📆 Session Information (Date, Location, Context)</li>
+        <li>🩺 Medical Conditions (Diagnosis Timeline & Notes)</li>
+        <li>❓ Questions to Ask Your Doctor</li>
+        <li>🗒️ Notes & Journaling</li>
+        <li>🧠 PHQ-9 Depression Assessment</li>
+        <li>📋 Mental Residual Functional Capacity (RFC)</li>
+        <li>⚡ FACIT-F Fatigue & Functional Health (v4)</li>
+        <li>🧩 PROMIS Applied Cognition (General Concerns 4a)</li>
+        <li>📊 Scoring Panels (PHQ & PROMIS raw + T-scores)</li>
+      </ul>
+
+      <p>
+        <strong>My reflection:</strong> While the form successfully models semantic richness and covers diverse dimensions, I quickly noticed how overwhelming it felt when all sections loaded at once.  
+        Through this exploration, I learned that <em>minimalism and emotional resonance</em> matter more than completeness—and that patient choice should guide data entry. I also saw how my custom field design allowed softness and adaptability, even within structured formats.
+      </p>
+
+      <p>
+        👉 <a href="miniportal.html" target="_blank">Try a live demo via miniportal.html →</a>
+      </p>
+    </div>
+  </details>
+</section>
+
+      <section aria-labelledby="tech-note-title">
+  <h2 id="tech-note-title">🛠️ Technology Note</h2>
+
+  <details>
+    <summary><strong>View technical details about the PROM JSON & LHC-Forms setup</strong></summary>
+
+    <div style="margin-top: 1.5rem;">
+      <p>
+        This prototype uses <code>9-sections.lforms.json</code> — a structured LHC-Forms–compatible file that defines a semantic PROM questionnaire for mental health domains.  
+        You can explore it directly inside the GitHub repository:
+      </p>
+
+      <p>
+        📁 <a href="https://github.com/AnnChou/eproms-portal/blob/main/9-sections.lforms.json" target="_blank">View 9-sections.lforms.json on GitHub →</a>
+      </p>
+
+      <h3 style="margin-top: 1rem;">📦 How It Works</h3>
+      <p>
+        To load this JSON as an <strong>LHC widget</strong> inside a browser-based form:
+      </p>
+
+      <ol>
+        <li>Include LHC-Forms JS & CSS in your HTML (via CDN)</li>
+        <li>Create a container (e.g. <code>&lt;div id="lforms-container"&gt;</code>)</li>
+        <li>Use JavaScript to fetch and render the form:
+          <pre style="background:#f9f9f9; border:1px solid #ddd; padding:0.8rem; border-radius:6px;"><code>fetch('9-sections.lforms.json')
+  .then(response => response.json())
+  .then(formData => {
+    LForms.Util.addFormToPage(formData, 'lforms-container');
+  });</code></pre>
+        </li>
+      </ol>
+
+      <p>
+        When rendered, the form allows the patient to complete <em>one selected section</em> based on their needs or clinical instruction.  
+        Submitted responses are returned as a FHIR <code>QuestionnaireResponse</code> object for processing or integration.
+      </p>
+    </div>
+  </details>
+</section>
+
+
       <section>
         <h2>Evaluation</h2>
         <p>The portal prototype was assessed using heuristic inspection and cognitive walkthrough methods. These evaluations showed good usability in terms of navigation and visual clarity but highlighted length and cultural sensitivity of PROMs as areas for future improvement.</p>

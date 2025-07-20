@@ -1,0 +1,80 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "44249-1",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2020-09-20T23:49:00-04:00",
+    "profile": [
+      "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
+    ]
+  },
+  "tag": [
+    {
+      "code": "lformsVersion: 25.1.5"
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://loinc.org",
+      "value": "44249-1"
+    }
+  ],
+  "name": "PHQ-9 quick depression assessment panel",
+  "title": "PHQ-9 quick depression assessment panel",
+  "status": "draft",
+  "subjectType": [
+    "Patient",
+    "Person"
+  ],
+  "code": [
+    {
+      "system": "http://loinc.org",
+      "code": "44249-1",
+      "display": "PHQ-9 quick depression assessment panel"
+    }
+  ],
+  "item": [
+    {
+      "linkId": "/44249-1",
+      "text": "PHQ-9 quick depression assessment panel [Reported.PHQ]",
+      "item": [
+        {
+          "linkId": "/74250-9",
+          "text": "Little interest or pleasure in doing things",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "LA6568-5",
+                "display": "Not at all"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "LA6569-3",
+                "display": "Several days"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "LA6570-1",
+                "display": "More than half the days"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "LA6571-9",
+                "display": "Nearly every day"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "/44261-6",
+          "text": "Patient health questionnaire 9 item total score",
+          "type": "decimal"
+        }
+      ]
+    }
+  ]
+}

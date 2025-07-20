@@ -1,0 +1,44 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
+    ]
+  },
+  "tag": [
+    {
+      "code": "lformsVersion: 25.1.5"
+    }
+  ],
+  "status": "completed",
+  "authored": "2020-09-21T09:16:49.306Z",
+  "item": [
+    {
+      "linkId": "/44249-1",
+      "text": "PHQ-9 quick depression assessment panel [Reported.PHQ]",
+      "item": [
+        {
+          "linkId": "/74250-9",
+          "text": "Little interest or pleasure in doing things",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "LA6569-3",
+                "display": "Several days"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "/44261-6",
+          "text": "Patient health questionnaire 9 item total score",
+          "answer": [
+            {
+              "valueDecimal": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

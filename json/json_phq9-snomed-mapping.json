@@ -1,0 +1,16 @@
+{
+  "questionnaireId": "44249-1",
+  "questionMappings": [
+    {
+      "linkId": "/74250-9",
+      "loincCode": "74250-9",
+      "questionText": "Little interest or pleasure in doing things",
+      "snomedConcept": {
+        "code": "41723004",
+        "display": "Loss of interest in previously enjoyable activity (finding)",
+        "system": "http://snomed.info/sct"
+      }
+    }
+    // You can add more question-to-SNOMED mappings here for additional PHQ-9 questions as needed
+  ]
+}

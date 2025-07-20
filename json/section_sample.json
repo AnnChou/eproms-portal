@@ -1,0 +1,52 @@
+{
+  "lformsVersion": "25.0.0",
+  "items": [
+    {
+      "header": false,
+      "dataType": "CNE",
+      "question": "Little interest or pleasure in doing things",
+      "linkId": "/74250-9",
+      "questionCodeSystem": "https://loinc.org",
+      "questionCode": "74250-9",
+      "questionCardinality": {
+        "min": "1",
+        "max": "1"
+      },
+      "answerCardinality": {
+        "min": "0",
+        "max": "1"
+      },
+      "editable": "1",
+      "answers": [
+        {
+          "text": "Not at all",
+          "code": "LA6568-5",
+          "system": null,
+          "label": "0",
+          "score": 0
+        },
+        {
+          "text": "Several days",
+          "code": "LA6569-3",
+          "system": null,
+          "label": "1",
+          "score": 1
+        },
+        {
+          "text": "More than half the days",
+          "code": "LA6570-1",
+          "system": null,
+          "label": "2",
+          "score": 2
+        },
+        {
+          "text": "Nearly every day",
+          "code": "LA6571-9",
+          "system": null,
+          "label": "3",
+          "score": 3
+        }
+      ]
+    }
+  ]
+}

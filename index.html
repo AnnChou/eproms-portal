@@ -11,17 +11,17 @@
   <meta name="robots" content="index, follow" />
 
   <!-- 📣 Open Graph for Social Sharing -->
-  <meta property="og:title" content="ePROMS Portal – Digital Health Case Study" />
-  <meta property="og:description" content="A field project exploring patient-centered design using HL7 FHIR and LOINC standards." />
+  <meta property="og:title" content="ePROMS Portal – a digital health technical implementation and Case Study" />
+  <meta property="og:description" content="A field project with technical implementation exploring patient-centered design using HL7 FHIR and LOINC standards." />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://yourdomain.com/ePROMS-case-study" />
-  <meta property="og:image" content="https://yourdomain.com/assets/ePROMS-thumbnail.jpg" />
+  <meta property="og:url" content="https://annchou.github.io/eproms-portal/ePROMS-case-study" />
+  <meta property="og:image" content="https://annchou.github.io/eproms-portal/rss/ePROMS_title.png" />
 
   <!-- 🐦 Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ePROMS Portal – Digital Health Case Study" />
   <meta name="twitter:description" content="A field project exploring patient-centered design using HL7 FHIR and LOINC standards." />
-  <meta name="twitter:image" content="https://yourdomain.com/assets/ePROMS-thumbnail.jpg" />
+  <meta name="twitter:image" content="https://annchou.github.io/eproms-portal/rss/ePROMS_title.png" />
 
   <!-- 🎨 Stylesheet -->
   <link rel="stylesheet" href="style.css" />
@@ -31,9 +31,9 @@
   <main class="content">
     <article>
       <header>
-        <h1>ePROMS Portal – Field Project Case Study</h1>
+        <h1>ePROMS Portal – a digital health technical implementation and Case Study</h1>
         <p><strong>Project:</strong> HINF 597 Final Field Project at University of Victoria</p>
-        <p><strong>Author:</strong> Ann Chou</p>
+        <p><strong>Author:</strong> Ann Chou (2020)</p>
       </header>
 
       <section>
@@ -46,6 +46,63 @@
         <p>In many health systems, patient feedback is underutilized in electronic health records (EHRs). This project addresses that gap by creating a portal that collects structured symptom data directly from patients, allowing for improved self-assessment, care planning, and shared decision-making.</p>
       </section>
 
+      <section>
+        <h2>Patient Agency and the “What Matters to Me” Movement</h2>
+        <details open>
+          <summary><strong>Why Patient Voice Matters</strong></summary>
+          <p>
+            Until recently, patients in British Columbia had limited opportunity to enter their own health notes. In March 2020, tools like the <em>BC Health Gateway</em> and Telus Health’s <em>Babylon</em> app began allowing people to input medical history and reflections directly.
+          </p>
+          <p>
+            This shift reflects growing support for <strong>patient-as-partner</strong> approaches (Chow et al. 2009; Armstrong, 2015). Previously, clinicians largely controlled what entered an electronic health record (EHR)—often prioritizing professional goals over patient needs.
+          </p>
+          <p>
+            Initiatives like Alberta Health and Fraser Health’s <em>“What Matters to You?”</em> campaign signal a new paradigm: strategic listening and shared decision-making, where personal health priorities can shape care delivery.
+          </p>
+        </details>
+      
+        <details>
+          <summary><strong>Understanding PROMs and ePROMs</strong></summary>
+          <p>
+            <strong>Patient-Reported Outcome Measures (PROMs)</strong> are validated questionnaires used to capture a patient’s perceptions of their health. They’re tested for reliability, sensitivity, specificity, and predictive value.
+          </p>
+          <p>
+            PROMs come in two types:
+            <ul>
+              <li><strong>Generic</strong> — e.g., EQ-5D for quality-of-life</li>
+              <li><strong>Condition-specific</strong> — e.g., PHQ-9 for depression</li>
+            </ul>
+            Typical formats include Likert-type scales (e.g. strongly agree → disagree) or visual analog lines between endpoints.
+          </p>
+          <p>
+            In health informatics, <strong>ePROMs</strong> digitize this process—bridging subjective patient insight with structured clinical records. Organizations often prescribe ePROMs before and after surgery to monitor progress or trigger follow-up. Patients can also self-administer ePROMs for disease management or visit preparation.
+          </p>
+          <p>
+            Research shows that when patients deliberately reflect and report their data, they make better-informed health choices (William et al., 2015).
+          </p>
+        </details>
+      
+        <details>
+          <summary><strong>Limitations and Design Considerations</strong></summary>
+          <p>
+            While PROMs and ePROMs are valuable, they present challenges. Many tools feel too long or impersonal, with limited cultural or linguistic sensitivity. Questions may not capture the full depth of lived experience.
+          </p>
+          <p>
+            Psychiatrist and anthropologist <strong>Arthur Kleinman</strong> (1978) proposed the <em>Explanatory Model</em>, emphasizing that patients and cultural groups hold varied beliefs about health and illness. Open-ended prompts like <em>“What matters to you?”</em> can reveal far richer stories than standardized checklists.
+          </p>
+          <p>
+            Some PROMs are available as <strong>Computerized Adaptive Testing (CAT)</strong>—such as <a href="https://www.healthmeasures.net" target="_blank" rel="noopener">PROMIS</a>—but they still face accessibility barriers for self-administering patients.
+          </p>
+          <p>
+            Reviews have also shown that mismatched PROM content can reduce patient satisfaction, with symptoms either underrepresented or framed too generically.
+          </p>
+          <p>
+            For example, while EQ-5D-5L is used by CIHI as a benchmark for hip and knee arthroplasty, patients often desire tools that feel more human and less survey-like.
+          </p>
+        </details>
+      </section>
+
+      
       <section>
         <h2>Goals</h2>
         <ul>
@@ -128,6 +185,64 @@
       <section>
         <h2>Evaluation</h2>
         <p>The portal prototype was assessed using heuristic inspection and cognitive walkthrough methods. These evaluations showed good usability in terms of navigation and visual clarity but highlighted length and cultural sensitivity of PROMs as areas for future improvement.</p>
+      </section>
+
+            <section aria-labelledby="walkthrough-title">
+        <h2 id="walkthrough-title">Patient Journey Walkthrough</h2>
+        <p>
+          The following screens demonstrate the ePROMS Portal experience—from referral input to PROM completion and prototype evaluation. Screens are organized by stage, using visual mockups and forms created with <strong>LForm Builder & Widget</strong> and FHIR-compliant JSON.
+        </p>
+      
+        <h3 id="phase1">🧭 Phase 1: Initial Mockups</h3>
+        <div class="image-grid" role="group" aria-labelledby="phase1">
+          <figure role="figure">
+            <img src="rss/epr_2_ref.png" alt="Prompt asking patient to enter referral number" />
+            <figcaption>epr_2_ref: Referral number prompt</figcaption>
+          </figure>
+          <figure role="figure">
+            <img src="rss/epr_3_keyinref.png" alt="Input field to enter referral number" />
+            <figcaption>epr_3_keyinref: Referral entry interface</figcaption>
+          </figure>
+          <figure role="figure">
+            <img src="rss/epr_4_body_sil.png" alt="Body silhouette interface for selecting symptom location" />
+            <figcaption>epr_4_body_sil: Body outline for selecting areas of concern</figcaption>
+          </figure>
+          <figure role="figure">
+            <img src="rss/epr_5_select.png" alt="Screen showing available PROM forms for selection" />
+            <figcaption>epr_5_select: PROMs selection screen</figcaption>
+          </figure>
+        </div>
+      
+        <h3 id="phase2">📝 Phase 2: Symptom Reporting Forms</h3>
+        <p>
+          The screens below show implemented data fields using <strong>LHC-Forms</strong> and customized JSON. Each interface supports accessible form input and semantic encoding.
+        </p>
+        <div class="image-grid" role="group" aria-labelledby="phase2">
+          <figure role="figure">
+            <img src="rss/epr_6_phr.png" alt="Form with demographic fields and a free-text field for patient questions" />
+            <figcaption>epr_6_phr: Demographics and patient-entered question</figcaption>
+          </figure>
+          <figure role="figure">
+            <img src="rss/epr_7_PHQ-9.png" alt="Start screen for PHQ-9 depression questionnaire" />
+            <figcaption>epr_7_PHQ-9: PHQ-9 questionnaire interface</figcaption>
+          </figure>
+          <figure role="figure">
+            <img src="rss/epr_8_appl_cogn.png" alt="Start screen for alternate applied cognition questionnaire" />
+            <figcaption>epr_8_appl_cogn: Applied cognition questionnaire</figcaption>
+          </figure>
+          <figure role="figure">
+            <img src="rss/epr_9_little_interest.png" alt="Question with dropdown menu for 'Little interest or pleasure in doing things'" />
+            <figcaption>epr_9_little_interest: PHQ-9 dropdown for mood response</figcaption>
+          </figure>
+        </div>
+      
+        <h3 id="phase3">📊 Phase 3: Prototype Evaluation</h3>
+        <div class="image-grid" role="group" aria-labelledby="phase3">
+          <figure role="figure">
+            <img src="rss/epr_10_eval.png" alt="Evaluation screen summarizing usability inspection" />
+            <figcaption>epr_10_eval: Heuristic evaluation summary (limited testing)</figcaption>
+          </figure>
+        </div>
       </section>
 
       <section>

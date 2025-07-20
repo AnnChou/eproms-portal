@@ -1,7 +1,7 @@
 // portal.js
 // Load and render the LForms questionnaire
 
-fetch('9-sections.lforms.json')
+fetch('./data/9-sections.lforms.json')
   .then(response => response.json())
   .then(formData => {
     LForms.Util.addFormToPage(formData, 'lforms-container');

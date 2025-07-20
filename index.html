@@ -71,6 +71,61 @@
       </section>
 
       <section>
+  <h2>Technical Implementation: Capturing Mental Health PROMs</h2>
+  <p>
+    As part of the <strong>ePROMS Portal</strong> prototype, this project explores how patient-reported outcomes (PROMs) for mental health can be captured using interoperable standards. After comparing several options, the <strong>PHQ-9 questionnaire</strong> was selected for its structured format and clinical relevance.
+  </p>
+
+  <h3>Selected Question</h3>
+  <p><em>"Little interest or pleasure in doing things"</em> — a key PHQ-9 item used to assess mood and engagement.</p>
+
+  <h3>Standards Mapping</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Element</th>
+        <th>Standard</th>
+        <th>Code</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Question</td>
+        <td>LOINC</td>
+        <td>74250-9</td>
+        <td>Little interest or pleasure in doing things</td>
+      </tr>
+      <tr>
+        <td>Clinical Concept</td>
+        <td>SNOMED CT</td>
+        <td>41723004</td>
+        <td>Loss of interest in previously enjoyable activity (finding)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Answer Options</h3>
+  <ul>
+    <li><strong>LA6568-5</strong> – Not at all (Score: 0)</li>
+    <li><strong>LA6569-3</strong> – Several days (Score: 1)</li>
+    <li><strong>LA6570-1</strong> – More than half the days (Score: 2)</li>
+    <li><strong>LA6571-9</strong> – Nearly every day (Score: 3)</li>
+  </ul>
+
+  <h3>Implementation Files</h3>
+  <ul>
+    <li><code>phq9-questionnaire.json</code> – FHIR Questionnaire resource</li>
+    <li><code>phq9-questionnaire-response.json</code> – Sample patient data</li>
+    <li><code>phq9-snomed-mapping.json</code> – Concept mapping overlays</li>
+    <li><code>sample-sample.json</code> – Custom LHC-Forms section</li>
+  </ul>
+  <p>
+    These files collectively demonstrate how PROMs can be digitized and semantically enriched using HL7 FHIR, SNOMED CT, and LOINC standards.
+  </p>
+</section>
+
+      <section>
         <h2>Evaluation</h2>
         <p>The portal prototype was assessed using heuristic inspection and cognitive walkthrough methods. These evaluations showed good usability in terms of navigation and visual clarity but highlighted length and cultural sensitivity of PROMs as areas for future improvement.</p>
       </section>

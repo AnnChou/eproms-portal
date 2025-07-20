@@ -5,6 +5,7 @@ fetch('9-sections.lforms.json')
   .then(response => response.json())
   .then(formData => {
     LForms.Util.addFormToPage(formData, 'lforms-container');
+    LForms.Util.addFormToPage(formDefinition, 'myFormContainer', options);
   })
   .catch(err => {
     document.getElementById('lforms-container').innerHTML =

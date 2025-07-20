@@ -71,6 +71,9 @@ The ePROMS Portal is a partially implemented prototype using the HL7-compliant L
 - Interface walkthroughs and usability exploration
 
 🔧 While not a fully deployable system, the project demonstrates how Patient Health Record (PHR) systems can incorporate PROMs with minimal integration—provided they adopt JSON-formatted resources based on these standards.
+
+please read `LHC-form-set-up-guide.md` to implement LHC-ready json
+
 ---
 ## 📝 Simplified Online Report
 
@@ -96,7 +99,7 @@ To preserve its context but honor its roughness, the report isn’t publicly hos
 - [LOINC](https://loinc.org/)  
 - [SNOMED CT](https://www.snomed.org/)  
 - SMART on FHIR API  
-- LHC-Forms Toolkit
+- [LHC-Forms Toolkit] (https://lhncbc.github.io/lforms/)
 
 ---
 
@@ -109,6 +112,23 @@ To preserve its context but honor its roughness, the report isn’t publicly hos
 ---
 
 ## 📄 JSON Resource Highlights
+
+### 9-sections.lforms.json
+9-sections.lforms.json is a questionnaire definition file used in the ePROMS portal.
+It follows the LHC-Forms (LForms) JSON format, which is compatible with HL7 FHIR and LOINC standards for healthcare data collection.
+
+Purpose:
+This file defines a multi-section, patient-reported outcome form that is presented to users in the portal. It is designed for patients to self-report symptoms, experiences, or other health-related information.
+
+Structure:
+The file contains:
+
+Metadata (title, version, etc.)
+9 distinct sections (groups of related questions)
+Questions and answer options for each section
+Data types, validation rules, and coding (e.g., LOINC codes)
+How it’s used:
+The web portal loads this JSON file and renders it as an interactive form for patients. After the patient fills it out, their responses are structured as a FHIR QuestionnaireResponse for downstream processing, storage, or integration with other healthcare systems.
 
 ### 📄 PHQ-9 Questionnaire
 
